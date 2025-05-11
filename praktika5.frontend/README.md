@@ -1,5 +1,7 @@
 # Book Management React Frontend
 
+NEED TO CLONE PRAKTIKABACKEND3 AGAIN ALSO DUE TO CHANGES IN CODE!
+
 This is the React frontend for the Book Management App. All user and admin functionality is handled here.
 
 ## Setup & Running
