@@ -2,13 +2,12 @@ const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 const swaggerAutogen = require('swagger-autogen')();
 
+
 const doc = {
   info: {
     title: 'My API',
     description: 'API documentation for the backend.',
   },
-  host: 'localhost:3000', // Update this if your app runs on a different host or port
-  schemes: ['http'], // Use 'https' if your app uses HTTPS
 };
 
 

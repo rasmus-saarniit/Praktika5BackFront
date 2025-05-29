@@ -18,25 +18,8 @@ const authorsRouter = require('./routes/authors');
 
 
 const app = express();
-// CORS configuration
-const allowedOrigins = process.env.CORS_ORIGINS
-  ? process.env.CORS_ORIGINS.split(',').map(origin => origin.trim())
-  : ['http://localhost:3001']; // Default: React dev server
-
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      // Allow requests with no origin (like mobile apps, curl, etc.)
-      if (!origin) return callback(null, true);
-      if (allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      } else {
-        return callback(new Error('Not allowed by CORS'));
-      }
-    },
-    credentials: true,
-  })
-);
+// CORS configuration (allow all for development)
+app.use(cors());
 app.use(express.json());
 
 // Comments endpoints
